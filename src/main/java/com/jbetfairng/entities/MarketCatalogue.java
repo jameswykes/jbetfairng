@@ -1,11 +1,13 @@
 package com.jbetfairng.entities;
 
+import java.util.Date;
 import java.util.List;
 
 public class MarketCatalogue {
 
 	private String marketId;
 	private String marketName;
+	private Date marketStartTime;
 	private MarketDescription description;
 	private List<RunnerCatalog> runners = null;
 	private EventType eventType;
@@ -66,6 +68,14 @@ public class MarketCatalogue {
 
 	public void setEvent(Event event) {
 		this.event = event;
+	}
+
+	public Date getMarketStartTime() {
+		return marketStartTime;
+	}
+
+	public void setMarketStartTime(Date marketStartTime) {
+		this.marketStartTime = marketStartTime;
 	}
 
 	public String toString() {
